@@ -14,13 +14,12 @@ import static org.springframework.web.reactive.function.server.ServerResponse.*;
 public class SpringBootLazyInitializationApplication {
 
 	public static void main(String[] args) {
-		System.setProperty("spring.main.lazy-initialization", "true");
 		SpringApplication.run(SpringBootLazyInitializationApplication.class, args);
 	}
 
 	@Bean
 	public RouterFunction<ServerResponse> route() {
-		return RouterFunctions.route(GET("/hello"), serverRequest -> ok().syncBody("Hello World!!!!"));
+		return RouterFunctions.route(GET("/hello"), serverRequest -> ok().syncBody("Hello World!!!!!"));
 	}
 
 }
